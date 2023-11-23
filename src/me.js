@@ -9,7 +9,7 @@ const me = ({ navigation }) => {
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', position: 'absolute', bottom: 0 }}>
                 <Pressable
-                    style={{ width: "100px", height: "70px", backgroundColor: "White", alignItems: 'center', justifyContent: 'center' }}
+                    style={{ width: "100px", height: "70px", backgroundColor: "White", alignItems: 'center', justifyContent: 'center', marginLeft: -2  }}
                     onPress={() =>
                         navigation.navigate("edit")}
                 >
@@ -24,7 +24,7 @@ const me = ({ navigation }) => {
                         navigation.navigate('template')
 
                     }
-                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' }}
+                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center', marginLeft: -2  }}
                 >
                     <Image
                         source={require("../assets/template_false.jpg")}
@@ -33,7 +33,7 @@ const me = ({ navigation }) => {
                 </Pressable>
                 <Pressable
                     onPress={() => navigation.navigate('inbox')}
-                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' }}
+                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' , marginLeft: -2 }}
                 >
                     <Image
                         source={require("../assets/inbox_false.jpg")}
@@ -42,7 +42,7 @@ const me = ({ navigation }) => {
                 </Pressable>
                 <Pressable
                     onPress={() => navigation.navigate('me')}
-                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' }}
+                    style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' , marginLeft: -2 }}
                 >
 
                     <Image
