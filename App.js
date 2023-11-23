@@ -12,7 +12,7 @@ export default function App() {
   const stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <stack.Navigator screenOptions={{ headerShown: false }}>
+      <stack.Navigator initialRouteName="me"  screenOptions={{ headerShown: false }}>
         <stack.Screen name='edit' component={edit} />
         <stack.Screen name='template' component={template} />
         <stack.Screen name='inbox' component={inbox} />
