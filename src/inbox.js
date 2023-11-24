@@ -8,16 +8,16 @@ const inbox = ({ navigation }) => {
                 <Text style={{ fontWeight: 'bold', fontSize: '20px', textAlign: 'center', marginTop: '10px', marginBottom: '10px' }}>Hộp Thư đến</Text>
             </View>
 
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around', marginBottom: '10px', backgroundColor:'white' }}>
+            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around', marginBottom: '10px', backgroundColor: 'white' }}>
                 <View style={{ width: "100%", flexDirection: "row" }}>
                     <ScrollView>
                         <View style={{ flexDirection: 'row' }}>
                             <Pressable
-                            onPress={() =>
-                                navigation.navigate('inbox2')
-        
-                            }
-                            
+                                onPress={() =>
+                                    navigation.navigate('inbox2')
+
+                                }
+
                                 style={{
                                     width: "45%",
                                     height: "45px",
@@ -27,7 +27,7 @@ const inbox = ({ navigation }) => {
                                     borderColor: 'gray'
 
                                 }}
-                                
+
                             >
                                 <Text
                                     style={{ color: "gray", fontWeight: "bold", textAlign: "center", fontSize: '15px' }}
@@ -67,6 +67,10 @@ const inbox = ({ navigation }) => {
                     <ScrollView>
                         <View style={{ flexDirection: 'row' }}>
                             <Pressable
+                                onPress={() =>
+                                    navigation.navigate('inbox1_2')
+
+                                }
                                 style={{
                                     width: "110px",
                                     height: "38px",
@@ -106,7 +110,12 @@ const inbox = ({ navigation }) => {
                                     Trực tuyến
                                 </Text>
                             </Pressable>
-                            <Pressable
+                            <Pressable 
+                             onPress={() =>
+                                navigation.navigate('inbox1_3')
+
+                            }
+                            
                                 style={{
                                     width: "110px",
                                     height: "38px",
