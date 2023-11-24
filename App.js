@@ -20,6 +20,7 @@ import image from './src/image';
 import image_1 from './src/image_1';
 import newproject from './src/newproject';
 import image_3 from './src/image_3';
+import help from './src/help';
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
         <stack.Screen name='image_1' component={image_1} />
         <stack.Screen name='image_3' component={image_3} />
         <stack.Screen name='newproject' component={newproject} />
+        <stack.Screen name='help' component={help} /> 
       </stack.Navigator>
 
     </NavigationContainer>
