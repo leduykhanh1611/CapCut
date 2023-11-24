@@ -69,6 +69,7 @@ const edit = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: 5 }}>
                     <View>
                         <Pressable
+                            onPress={() => navigation.navigate('select_img')}
                             style={{ height: "60px", width: "72px", marginTop: "5px", marginLeft: 20, borderRadius: 10 }}
 
                         >
@@ -93,7 +94,7 @@ const edit = ({ navigation }) => {
                     </View>
                     <View style={{}}>
                         <Pressable
-
+                            onPress={() => navigation.navigate('select_img_2')}
                             style={{ height: "60px", width: "72px", marginTop: "5px", marginLeft: 1, borderRadius: 10 }}
                         >
                             <Image
@@ -105,6 +106,7 @@ const edit = ({ navigation }) => {
                     </View>
                     <View>
                         <Pressable
+                            onPress={() => navigation.navigate('select_img')}
                             style={{ height: "60px", width: "72px", marginTop: "5px", marginLeft: 1, borderRadius: 10 }}
 
                         >
@@ -129,7 +131,9 @@ const edit = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={{ marginTop: 40 }}>
-                    <Pressable style={{ marginLeft: 20, borderRadius: 40 }}>
+                    <Pressable
+                    onPress={() => navigation.navigate('newproject')}
+                    style={{ marginLeft: 20, borderRadius: 40 }}>
                         <Image
                             style={{ width: "352px", height: 126, borderRadius: 18 }}
                             source={require("../assets/newproject.png")}

@@ -14,13 +14,19 @@ import setting from './src/setting';
 import setting_2 from './src/setting_2';
 import view_history from './src/view_history';
 import edit_profile from './src/edit_profile';
+import select_img from './src/select_img';
+import select_img_2 from './src/select_img_2';
+import image from './src/image';
+import image_1 from './src/image_1';
+import newproject from './src/newproject';
+import image_3 from './src/image_3';
 
 
 export default function App() {
   const stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <stack.Navigator initialRouteName='edit_profile' screenOptions={{ headerShown: false }}>
+      <stack.Navigator initialRouteName='template' screenOptions={{ headerShown: false }}>
         <stack.Screen name='edit' component={edit} />
         <stack.Screen name='template' component={template} />
         <stack.Screen name='inbox' component={inbox} />
@@ -33,6 +39,12 @@ export default function App() {
         <stack.Screen name='setting_2' component={setting_2} />
         <stack.Screen name='view_history' component={view_history} />
         <stack.Screen name='edit_profile' component={edit_profile} />
+        <stack.Screen name='select_img' component={select_img} />
+        <stack.Screen name='select_img_2' component={select_img_2} />
+        <stack.Screen name='image' component={image} />
+        <stack.Screen name='image_1' component={image_1} />
+        <stack.Screen name='image_3' component={image_3} />
+        <stack.Screen name='newproject' component={newproject} />
       </stack.Navigator>
 
     </NavigationContainer>
