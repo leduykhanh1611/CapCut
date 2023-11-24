@@ -4,11 +4,11 @@ const edit = ({ navigation }) => {
     var [data, setData] = useState();
     useEffect(() => {
         fetch("https://654ad5c25b38a59f28ee45ce.mockapi.io/capcut")
-          .then((response) => response.json())
-          .then((json) => {
-            setData(json);
-          });
-      }, []);
+            .then((response) => response.json())
+            .then((json) => {
+                setData(json);
+            });
+    }, []);
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ flex: 1, backgroundColor: "white", position: 'relative' }}>
@@ -51,6 +51,10 @@ const edit = ({ navigation }) => {
                     </View>
                     <View>
                         <Pressable
+                            onPress={() =>
+                                navigation.navigate('setting')
+
+                            }
                             style={{ height: "29px", width: "25px", marginTop: "5px", marginLeft: 25 }}
 
                         >
@@ -158,23 +162,23 @@ const edit = ({ navigation }) => {
                                 // size: "4MB",
                                 // time: "00:29",
                                 // image: require('../assets/anh1.png'),
-                                <View style = {{flexDirection: 'row'}}>
+                                <View style={{ flexDirection: 'row' }}>
                                     <View>
                                         <Pressable style={{}}
                                         >
                                             <Image
-                                                source = {{uri: item.image}}
+                                                source={{ uri: item.image }}
                                                 style={{ width: 90, height: 90, resizeMode: 'contain' }}>
                                             </Image>
 
                                         </Pressable>
                                     </View>
-                                    <View style = {{marginLeft: 18}}>
-                                        <Text style  ={{fontWeight: 'bold'}}>{item.name}</Text>
-                                        <Text style = {{color: "gray", marginTop: 10}}>{item.date}</Text>
-                                        <View style = {{flexDirection : 'row', marginTop: 10}}>
-                                            <Text style = {{color: "gray"}}>{item.size}</Text>
-                                            <Text style = {{color: "gray", marginLeft: 20}}>{item.time}</Text>
+                                    <View style={{ marginLeft: 18 }}>
+                                        <Text style={{ fontWeight: 'bold' }}>{item.name}</Text>
+                                        <Text style={{ color: "gray", marginTop: 10 }}>{item.date}</Text>
+                                        <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                                            <Text style={{ color: "gray" }}>{item.size}</Text>
+                                            <Text style={{ color: "gray", marginLeft: 20 }}>{item.time}</Text>
                                         </View>
 
                                     </View>

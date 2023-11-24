@@ -10,16 +10,16 @@ import inbox1_3 from './src/inbox1_3';
 import inbox2 from './src/inbox2';
 import me from './src/me';
 import me_1 from './src/me_1';
-
+import setting from './src/setting';
+import setting_2 from './src/setting_2';
 import view_history from './src/view_history';
 
 
 export default function App() {
-
   const stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <stack.Navigator initialRouteName='view_history' screenOptions={{ headerShown: false }}>
+      <stack.Navigator screenOptions={{ headerShown: false }}>
         <stack.Screen name='edit' component={edit} />
         <stack.Screen name='template' component={template} />
         <stack.Screen name='inbox' component={inbox} />
@@ -28,6 +28,8 @@ export default function App() {
         <stack.Screen name='inbox2' component={inbox2} />
         <stack.Screen name='me' component={me} />
         <stack.Screen name='me_1' component={me_1} />
+        <stack.Screen name='setting' component={setting} />
+        <stack.Screen name='setting_2' component={setting_2} />
         <stack.Screen name='view_history' component={view_history} />
       </stack.Navigator>
 
