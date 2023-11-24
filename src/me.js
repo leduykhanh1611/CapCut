@@ -64,6 +64,7 @@ const me = ({ navigation }) => {
             </View>
             <View style={{ flexDirection: 'row', marginLeft: 10, marginTop: 10 }}>
                 <Pressable
+                onPress={() => navigation.navigate('edit_profile')}
                     style={{ borderWidth: 1, height: 30, width: 290, borderRadius: 5, borderTopColor: "gray", borderBottomColor: "gray", borderLeftColor: "gray", borderRightColor: "gray" }}
 
                 >
