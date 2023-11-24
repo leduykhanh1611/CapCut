@@ -9,13 +9,14 @@ import inbox1_2 from './src/inbox1_2';
 import inbox1_3 from './src/inbox1_3';
 import inbox2 from './src/inbox2';
 import me from './src/me';
+import me_1 from './src/me_1';
 
 
 export default function App() {
   const stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <stack.Navigator screenOptions={{ headerShown: false }}>
+      <stack.Navigator initialRouteName='me_1' screenOptions={{ headerShown: false }}>
         <stack.Screen name='edit' component={edit} />
         <stack.Screen name='template' component={template} />
         <stack.Screen name='inbox' component={inbox} />
@@ -23,6 +24,7 @@ export default function App() {
         <stack.Screen name='inbox1_3' component={inbox1_3} />
         <stack.Screen name='inbox2' component={inbox2} />
         <stack.Screen name='me' component={me} />
+        <stack.Screen name='me_1' component={me_1} />
       </stack.Navigator>
 
     </NavigationContainer>

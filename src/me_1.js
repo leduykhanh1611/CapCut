@@ -1,7 +1,7 @@
 import { View, Text, Pressable, Image, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
-const me = ({ navigation }) => {
+const me_1 = ({ navigation }) => {
     var [data, setData] = useState();
     useEffect(() => {
         fetch("https://654ad5c25b38a59f28ee45ce.mockapi.io/job")
@@ -117,51 +117,29 @@ const me = ({ navigation }) => {
             <View style={{ flexDirection: 'row', marginTop: 15 }}>
                 <Pressable
                     onPress={() => navigation.navigate('me_1')}
-                    style={{ height: 40, width: "50%", borderBottomColor: "gray", borderWidth: 1, borderTopColor: "white", borderLeftColor: "white", borderRightColor: "white" }}
+                    style={{ height: 40, width: "50%", borderBottomColor: "Black", borderWidth: 2, borderTopColor: "white", borderLeftColor: "white", borderRightColor: "white" }}
                 >
-                    <Text style={{ textAlign: 'center', color: "gray", marginTop: 10, fontSize: 15 }}>
+                    <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: '800', fontSize: 15 }}>
                         Favorites🔒
                     </Text>
 
                 </Pressable>
                 <Pressable
                     onPress={() => navigation.navigate('me')}
-                    style={{ height: 40, width: "50%", borderBottomColor: "Black", borderWidth: 2, borderTopColor: "white", borderLeftColor: "white", borderRightColor: "white" }}
+                    style={{ height: 40, width: "50%", borderBottomColor: "gray", borderWidth: 1, borderTopColor: "white", borderLeftColor: "white", borderRightColor: "white" }}
+
                 >
-                    <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: '800', fontSize: 15 }}>
+                    <Text style={{ textAlign: 'center', color: "gray", marginTop: 10, fontSize: 15 }}>
                         Likes
                     </Text>
 
                 </Pressable>
             </View>
-            <View style={{ flex: 3 }}>
-                <FlatList
-                    data={data}
-                    numColumns={2}
-                    renderItem={({ item }) => {
-                        return (
-                            // name: '20231102-01',
-                            // date: '22/11/2023 02:59',
-                            // size: "4MB",
-                            // time: "00:29",
-                            // image: require('../assets/anh1.png'),
-                            <View style={{ flexDirection: 'row' }}>
-                                <View style={{ marginTop: 10 }}>
-                                    <Pressable style={{ borderRadius: 10, margin: 10 }}
-                                    >
-                                        <Image
-                                            resizeMode='cover'
-                                            source={{ uri: item.image }}
-                                            style={{ width: "175px", height: 200, resizeMode: 'contain', borderRadius: 10 }}>
-                                        </Image>
-                                        <Text style={{ fontWeight: 'bold', textAlign: 'left' }}>{item.name}</Text>
-                                    </Pressable>
-                                </View>
-                            </View>
-
-                        )
-                    }}
-
+            <View style={{ flex: 3, justifyContent: 'center', alignItems: 'center', backgroundColor: "white" }}>
+                <Image
+                resizeMode='center'
+                style = {{height: "100%", width: "100%"}}
+                source={require("../assets/rong.jpg")}
                 />
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', position: 'absolute', bottom: 0, flex: 1 }}>
@@ -213,4 +191,4 @@ const me = ({ navigation }) => {
     )
 }
 
-export default me
+export default me_1
