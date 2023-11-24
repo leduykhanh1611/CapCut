@@ -40,6 +40,10 @@ const edit = ({ navigation }) => {
                     <View>
                         <Pressable
                             style={{ height: "27px", width: "23px", marginTop: "5px", marginLeft: 10 }}
+                            onPress={() =>
+                                navigation.navigate('help')
+
+                            }
 
                         >
                             <Image
