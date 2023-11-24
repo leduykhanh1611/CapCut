@@ -5,6 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import edit from './src/edit';
 import template from './src/template';
 import inbox from './src/inbox';
+import inbox1_2 from './src/inbox1_2';
+import inbox1_3 from './src/inbox1_3';
 import inbox2 from './src/inbox2';
 import me from './src/me';
 
@@ -17,6 +19,8 @@ export default function App() {
         <stack.Screen name='edit' component={edit} />
         <stack.Screen name='template' component={template} />
         <stack.Screen name='inbox' component={inbox} />
+        <stack.Screen name='inbox1_2' component={inbox1_2} />
+        <stack.Screen name='inbox1_3' component={inbox1_3} />
         <stack.Screen name='inbox2' component={inbox2} />
         <stack.Screen name='me' component={me} />
       </stack.Navigator>
