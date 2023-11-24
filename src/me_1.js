@@ -81,6 +81,7 @@ const me_1 = ({ navigation }) => {
             </View>
             <View style={{ marginTop: 15 }}>
                 <Pressable
+                onPress={() => navigation.navigate('view_history')}
                     style={{ borderRadius: 5, height: 50, width: 370, borderWidth: 1, borderTopColor: "gray", borderBottomColor: "gray", borderLeftColor: "gray", borderRightColor: "gray", marginLeft: 10 }}
                 >
 

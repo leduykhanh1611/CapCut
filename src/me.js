@@ -12,6 +12,15 @@ const me = ({ navigation }) => {
     }, []);
     return (
         <View style={{ flex: 1, backgroundColor: "white" }}>
+            <View style  ={{justifyContent: 'flex-end', alignItems: 'flex-end', marginTop: 3}}>
+                <Pressable 
+                style={{height: 40, width: 40, marginTop: 4, marginRight: 5}}
+                >
+                    <Text style = {{textAlign: 'center', fontSize: 25, marginRight: 5}}>☰</Text>
+                </Pressable>
+
+
+            </View>
             <View style={{ flexDirection: 'row', marginLeft: 10 }}>
                 <View>
                     <Image
@@ -81,6 +90,7 @@ const me = ({ navigation }) => {
             </View>
             <View style={{ marginTop: 15 }}>
                 <Pressable
+                  onPress={() => navigation.navigate('view_history')}
                     style={{ borderRadius: 5, height: 50, width: 370, borderWidth: 1, borderTopColor: "gray", borderBottomColor: "gray", borderLeftColor: "gray", borderRightColor: "gray", marginLeft: 10 }}
                 >
 
