@@ -63,7 +63,7 @@ const template = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ flex: 1 }}>
-                <View style={{ flex: 3, justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '20px', marginBottom: '5px' }}>
+                <View style={{left:15, flex: 1, justifyContent: 'center', flexDirection: 'row', alignItems: 'center', marginTop: '20px', marginBottom: '5px' }}>
 
                     <TextInput
                         placeholder="T1 vô địch chung kết thế giới"
@@ -71,19 +71,26 @@ const template = ({ navigation }) => {
                         style={{
                             padding: 5,
                             width: '95%',
-                            height: '100px',
+                            height:'40px',
                             borderWidth: "1px",
                             backgroundColor: 'rgba(175, 193, 205, 0.15)',
                             borderRadius: "20px",
-                            flexDirection: "row"
+                            flexDirection: "row",
                             
                         }}
                     >
-            
+
                     </TextInput>
                     <Image
+                        source={require("../assets/find.png")}
+                        style={{ width: '30px', height: '30px', alignItems: 'center', resizeMode: 'contain', right:'35px' }}
+                    ></Image>
+
+                </View>
+                <View style={{flex:2}}>
+                    <Image
                         source={require("../assets/banner.jpg")}
-                        style={{ width: '95%', height: '100px', alignItems: 'center', resizeMode: 'contain' }}
+                        style={{ width: '95%', height: '100px', alignItems: 'center', resizeMode: 'contain', left:'10px' }}
                     ></Image>
                 </View>
 
@@ -97,7 +104,7 @@ const template = ({ navigation }) => {
 
                     }}
                 >
-                    <View style ={{width:"100%", flexDirection: "row"}}>
+                    <View style={{ width: "100%", flexDirection: "row" }}>
                         <ScrollView style={{}}>
                             <View style={{ flexDirection: 'row' }}>
                                 <Pressable
@@ -403,9 +410,10 @@ const template = ({ navigation }) => {
 
                     />
                 </View>
+
                 <View style={{ display: 'flex', flexDirection: 'row', position: 'absolute', bottom: 0 }}>
                     <Pressable
-                        style={{ width: "100px", height: "70px", backgroundColor: "White", alignItems: 'center', justifyContent: 'center'}}
+                        style={{ width: "100px", height: "70px", backgroundColor: "White", alignItems: 'center', justifyContent: 'center' }}
                         onPress={() =>
                             navigation.navigate("edit")}
                     >
@@ -429,7 +437,7 @@ const template = ({ navigation }) => {
                     </Pressable>
                     <Pressable
                         onPress={() => navigation.navigate('inbox')}
-                        style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center' , marginLeft: -2}}
+                        style={{ width: "100px", height: "70px", backgroundColor: "white", alignItems: 'center', justifyContent: 'center', marginLeft: -2 }}
                     >
                         <Image
                             source={require("../assets/inbox_false.jpg")}
